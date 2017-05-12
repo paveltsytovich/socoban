@@ -82,7 +82,11 @@
   <ItemGroup>
     <ClCompile Include="..\src\gtest-all.cc" />
     <ClCompile Include="..\src\gtest_main.cc" />
+    <ClCompile Include="GameObject.cpp" />
     <ClCompile Include="sample.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="GameObject.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
