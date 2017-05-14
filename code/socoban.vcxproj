@@ -84,6 +84,7 @@
     <ClCompile Include="..\src\gtest_main.cc" />
     <ClCompile Include="Box.cpp" />
     <ClCompile Include="GameSpace.cpp" />
+    <ClCompile Include="GameSpaceTest.cpp" />
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="sample.cpp" />
     <ClCompile Include="Target.cpp" />

@@ -11,7 +11,7 @@ Wall::~Wall()
 }
 bool Wall::CheckCollision(int x, int y)
 {
-
+	return 0;
 }
 
 void Wall::Move(int newX, int newY)

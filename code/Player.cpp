@@ -12,7 +12,7 @@ Player::~Player()
 
 bool Player::CheckCollision(int x, int y)
 {
-
+	return 0;
 }
 
 void Player::Move(int newX, int newY)
