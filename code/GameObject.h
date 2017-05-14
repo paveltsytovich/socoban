@@ -4,9 +4,12 @@ class GameObject
 private:
 	int x, y;
 public:
-	GameObject();
-	GameObject(int x,int y);
+	GameObject(int ax, int ay) :
+		x(ax), y(ay){}
 	virtual ~GameObject();
-	bool CheckCollisions(int x, int y);
+	virtual bool CheckCollisions(int x, int y)=0;
+	virtual void Move()=0;//абстрактный метод
 };
+
+
 
