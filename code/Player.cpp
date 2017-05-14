@@ -1,7 +1,7 @@
 #include "Player.h"
 
 
-Player::Player()
+Player::Player(int ax, int ay) :GameObject(ax,ay)
 {
 }
 
