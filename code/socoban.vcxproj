@@ -83,6 +83,7 @@
     <ClCompile Include="..\src\gtest-all.cc" />
     <ClCompile Include="..\src\gtest_main.cc" />
     <ClCompile Include="Box.cpp" />
+    <ClCompile Include="GameSpace.cpp" />
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="sample.cpp" />
     <ClCompile Include="Target.cpp" />
@@ -91,6 +92,7 @@
   <ItemGroup>
     <ClInclude Include="Box.h" />
     <ClInclude Include="GameObject.h" />
+    <ClInclude Include="GameSpace.h" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="Target.h" />
     <ClInclude Include="Wall.h" />
