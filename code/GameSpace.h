@@ -6,5 +6,6 @@ public:
 	GameSpace();
 	~GameSpace();
 	GameObject* GetGameObject(int x, int y);
+	void AddGameObject(GameObject* GameObject);
 };
 
