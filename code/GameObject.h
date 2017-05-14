@@ -7,8 +7,14 @@ public:
 	GameObject(int ax, int ay) :
 		x(ax), y(ay){}
 	virtual ~GameObject();
-	virtual bool CheckCollisions(int x, int y)=0;
-	virtual void Move()=0;//абстрактный метод
+	virtual bool CheckCollision(int x, int y)=0;
+	virtual void Move(int x,int y) = 0;//абстрактный метод
+	int GetX(){
+		return x;
+	};
+	int GetY(){
+		return y;
+	};
 };
 
 
