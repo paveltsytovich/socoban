@@ -15,6 +15,10 @@ public:
 	int GetY(){
 		return y;
 	};
+	virtual bool IsPlace(int ax, int ay)
+	{
+		return ax == x && ay == y;
+	}
 };
 
 
