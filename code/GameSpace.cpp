@@ -14,3 +14,7 @@ GameObject* GameSpace::GetGameObject(int x,int y)
 {
 	return nullptr;
 }
+void GameSpace::AddGameObject(GameObject *object)
+{
+
+}
