@@ -9,5 +9,6 @@ public:
 	~Wall();
 	bool CheckCollision(int x, int y);
 	void Move(int neX, int newY);
+	bool IsPlace(int ax, int ay);
 };
 

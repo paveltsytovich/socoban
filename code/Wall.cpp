@@ -19,3 +19,10 @@ void Wall::Move(int newX, int newY)
 {
 
 }
+
+bool Wall::IsPlace(int ax, int ay)
+{
+	int x = GetX();
+	int y = GetY();
+	return false;
+}
