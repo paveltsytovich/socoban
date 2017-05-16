@@ -16,5 +16,5 @@ GameObject* GameSpace::GetGameObject(int x,int y)
 }
 void GameSpace::AddGameObject(GameObject *object)
 {
-
+	GameObjects.push_back(object);
 }

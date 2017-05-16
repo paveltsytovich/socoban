@@ -8,6 +8,7 @@ Wall::Wall(int ax, int ay, int w, int h) : GameObject(ax, ay), width(w), height(
 
 Wall::~Wall()
 {
+
 }
 bool Wall::CheckCollision(int x, int y)
 {

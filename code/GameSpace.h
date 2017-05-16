@@ -1,7 +1,10 @@
 #pragma once
 #include "GameObject.h"
+#include <vector>
 class GameSpace
 {
+private:
+	std::vector<GameObject*> GameObjects;
 public:
 	GameSpace();
 	~GameSpace();
