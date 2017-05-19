@@ -86,6 +86,7 @@
     <ClCompile Include="GameSpace.cpp" />
     <ClCompile Include="GameSpaceTest.cpp" />
     <ClCompile Include="Player.cpp" />
+    <ClCompile Include="PlayerTest.cpp" />
     <ClCompile Include="sample.cpp" />
     <ClCompile Include="Target.cpp" />
     <ClCompile Include="Wall.cpp" />

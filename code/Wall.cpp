@@ -24,5 +24,17 @@ bool Wall::IsPlace(int ax, int ay)
 {
 	int x = GetX();
 	int y = GetY();
-	return false;
+	if (ax == x && ay < y)
+	{
+		return false;
+	}
+	else 
+	return true;
+	if (ay == y && ax < x)
+	{
+		return false;
+	}
+	else
+		return true;
+
 }
