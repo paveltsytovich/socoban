@@ -1,5 +1,5 @@
 #include "GameSpace.h"
-
+#include "GameObject.h"
 
 GameSpace::GameSpace()
 {

@@ -1,7 +1,8 @@
 #include "Box.h"
+#include"GameSpace.h"
 
 
-Box::Box(int ax, int ay) :GameObject(ax,ay)
+Box::Box(const GameSpace*owner, int ax, int ay) :GameObject(owner,ax,ay)
 {
 
 }

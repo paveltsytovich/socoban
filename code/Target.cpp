@@ -1,7 +1,7 @@
 #include "Target.h"
 
 
-Target::Target(int ax, int ay) :GameObject(ax,ay)
+Target::Target(const GameSpace* owner, int ax, int ay) :GameObject(owner,ax,ay)
 {
 }
 

@@ -1,7 +1,7 @@
 #include "Player.h"
 
 
-Player::Player(int ax, int ay) :GameObject(ax,ay)
+Player::Player(const GameSpace* owner, int ax, int ay) :GameObject(owner,ax,ay)
 {
 }
 

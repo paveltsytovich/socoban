@@ -1,6 +1,7 @@
 #pragma once
-#include "GameObject.h"
+//#include "GameObject.h"
 #include <vector>
+class GameObject;
 class GameSpace
 {
 private:
