@@ -3,7 +3,7 @@
 #include "Player.h"
 #include "Wall.h"
 #include "Box.h"
-
+#include "Target.h"
 TEST(PlayerTest, PlayerMoveToFreeField)
 {
 	GameSpace* g = new GameSpace;
@@ -40,4 +40,15 @@ TEST(PlayerTest, PlayerMoveBox)
 
 	ASSERT_EQ(b->GetX(), 4);
 	ASSERT_EQ(b->GetY(), 3);
+}
+TEST(PlayerTest, PlayerGoToTarget)
+{
+	GameSpace *g = new GameSpace();
+	Target *t = new Target(g,2, 2);
+	Player *p = new Player(g,2, 3);
+	g->AddGameObject(t);
+	g->AddGameObject(p);
+
+	ASSERT_TRUE(t->GetX() == p->GetX());
+	ASSERT_TRUE(t->GetY() == p->GetY());
 }
