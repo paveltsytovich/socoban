@@ -49,6 +49,8 @@ TEST(PlayerTest, PlayerGoToTarget)
 	g->AddGameObject(t);
 	g->AddGameObject(p);
 
+	p->Move(2, 2);
+
 	ASSERT_TRUE(t->GetX() == p->GetX());
 	ASSERT_TRUE(t->GetY() == p->GetY());
 }
