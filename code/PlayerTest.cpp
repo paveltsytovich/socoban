@@ -2,6 +2,8 @@
 #include "GameSpace.h"
 #include "Player.h"
 #include "Wall.h"
+#include "Box.h"
+
 TEST(PlayerTest, PlayerMoveToFreeField)
 {
 	GameSpace* g = new GameSpace;
@@ -23,4 +25,19 @@ TEST(PlayerTest, PlayerStoppedNearWall)
 	ASSERT_EQ(p->GetY(), 14);
 
 
+}
+TEST(PlayerTest, PlayerMoveBox)
+{
+	GameSpace * g = new GameSpace;
+	Box *b = new Box(g,4, 4);
+	Player *p = new Player(g, 4, 5);
+	g->AddGameObject(b);
+	g->AddGameObject(p);
+	p->Move(4, 4);
+
+	ASSERT_EQ(p->GetX(), 4);
+	ASSERT_EQ(p->GetY(), 4);
+
+	ASSERT_EQ(b->GetX(), 4);
+	ASSERT_EQ(b->GetY(), 3);
 }
