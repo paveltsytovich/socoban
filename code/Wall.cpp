@@ -1,7 +1,7 @@
 #include "Wall.h"
 
 
-Wall::Wall(const GameSpace* owner,int ax, int ay, int w, int h) : GameObject(owner,ax, ay), width(w), height(h)
+Wall::Wall(GameSpace* owner,int ax, int ay, int w, int h) : GameObject(owner,ax, ay), width(w), height(h)
 {
 }
 

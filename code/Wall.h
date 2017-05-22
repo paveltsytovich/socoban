@@ -6,7 +6,7 @@ class Wall :
 {
 	int width, height;
 public:
-	Wall(const GameSpace* owner, int ax, int ay,int w,int h);
+	Wall(GameSpace* owner, int ax, int ay,int w,int h);
 	~Wall();
 	bool CheckCollision(int x, int y);
 	void Move(int newX, int newY);

@@ -1,7 +1,7 @@
 #include "Player.h"
 
 
-Player::Player(const GameSpace* owner, int ax, int ay) :GameObject(owner,ax,ay)
+Player::Player(GameSpace* owner, int ax, int ay) :GameObject(owner,ax,ay)
 {
 }
 
@@ -17,5 +17,5 @@ bool Player::CheckCollision(int x, int y)
 
 void Player::Move(int newX, int newY)
 {
-
+	GameObject *go = GetGameSpace()->GetGameObject(newX, newY);
 }

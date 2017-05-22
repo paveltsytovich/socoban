@@ -4,10 +4,11 @@ class GameObject
 {
 private:
 	int x, y;
+    GameSpace * gs;
 protected:
-const GameSpace* gs;
+	GameSpace * GetGameSpace() { return gs; }
 public:
-	GameObject(const GameSpace* owner,int ax, int ay) :
+	GameObject(GameSpace* owner,int ax, int ay) :
 		gs(owner),x(ax), y(ay){}
 	virtual ~GameObject() {}
 	virtual bool CheckCollision(int x, int y)=0;
