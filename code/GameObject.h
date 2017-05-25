@@ -4,8 +4,10 @@ class GameObject
 {
 private:
 	int x, y;
-    GameSpace * gs;
+	GameSpace * gs;
 protected:
+	void SetX(int value){ x = value; }
+	void SetY(int value){ y = value; }
 	GameSpace * GetGameSpace() { return gs; }
 public:
 	GameObject(GameSpace* owner,int ax, int ay) :
