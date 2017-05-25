@@ -10,11 +10,12 @@ protected:
 	void SetY(int value){ y = value; }
 	GameSpace * GetGameSpace() { return gs; }
 public:
+	enum Direction{Up,Down,Left,Right};
 	GameObject(GameSpace* owner,int ax, int ay) :
 		gs(owner),x(ax), y(ay){}
 	virtual ~GameObject() {}
-	virtual bool CheckCollision(int x, int y)=0;
-	virtual void Move(int x,int y) = 0;//абстрактный метод
+	virtual bool CheckCollision(Direction) = 0;
+	virtual void Move(Direction) = 0;//абстрактный метод
 	int GetX(){
 		return x;
 	};

@@ -7,7 +7,7 @@ class Target :
 public:
 	Target(GameSpace* owner,int ax,int ay);
 	~Target();
-	bool CheckCollision(int x, int y);
-	void Move(int newX, int newY);
+	bool CheckCollision(Direction);
+	void Move(Direction);
 };
 

@@ -14,6 +14,7 @@ Box::~Box()
 
 bool Box::CheckCollision(int x, int y)
 {
+
 	return 0;
 }
 

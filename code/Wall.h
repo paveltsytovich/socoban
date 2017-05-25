@@ -8,8 +8,8 @@ class Wall :
 public:
 	Wall(GameSpace* owner, int ax, int ay,int w,int h);
 	~Wall();
-	bool CheckCollision(int x, int y);
-	void Move(int newX, int newY);
+	bool CheckCollision(Direction);
+	void Move(Direction);
 	bool IsPlace(int ax, int ay);
 };
 

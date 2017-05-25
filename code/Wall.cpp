@@ -10,12 +10,12 @@ Wall::~Wall()
 {
 
 }
-bool Wall::CheckCollision(int x, int y)
+bool Wall::CheckCollision(Direction)
 {
 	return true;
 }
 
-void Wall::Move(int newX, int newY)
+void Wall::Move(Direction)
 {
 
 }
