@@ -12,7 +12,7 @@ Target::~Target()
 
 bool Target::CheckCollision(int x, int y)
 {
-	return 0;
+	return false;
 }
 
 void Target::Move(int newX, int newY)
