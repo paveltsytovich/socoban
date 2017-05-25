@@ -10,8 +10,8 @@ TEST(PlayerTest, PlayerMoveToFreeField)
 	Player* p = new Player(g, 1, 2);
 	g->AddGameObject(p);
 	p->Move(GameObject::Direction::Down);
-	ASSERT_EQ(p->GetX(), 2);
-	ASSERT_EQ(p->GetY(), 2);
+	ASSERT_EQ(p->GetX(), 1);
+	ASSERT_EQ(p->GetY(), 3);
 }
 TEST(PlayerTest, PlayerStoppedNearWall)
 {
