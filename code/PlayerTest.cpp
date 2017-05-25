@@ -9,7 +9,7 @@ TEST(PlayerTest, PlayerMoveToFreeField)
 	GameSpace* g = new GameSpace;
 	Player* p = new Player(g, 1, 2);
 	g->AddGameObject(p);
-	p->Move(2, 2);
+	p->Move(GameObject::Direction::Down);
 	ASSERT_EQ(p->GetX(), 2);
 	ASSERT_EQ(p->GetY(), 2);
 }
@@ -20,7 +20,7 @@ TEST(PlayerTest, PlayerStoppedNearWall)
 	Player* p = new Player(g,5, 14);
 	g->AddGameObject(w);
 	g->AddGameObject(p);
-	p->Move(5, 13);
+	p->Move(GameObject::Direction::Up);
 	ASSERT_EQ(p->GetX(), 5);
 	ASSERT_EQ(p->GetY(), 14);
 
@@ -33,7 +33,7 @@ TEST(PlayerTest, PlayerMoveBox)
 	Player *p = new Player(g, 4, 5);
 	g->AddGameObject(b);
 	g->AddGameObject(p);
-	p->Move(4, 4);
+	p->Move(GameObject::Direction::Up);
 
 	ASSERT_EQ(p->GetX(), 4);
 	ASSERT_EQ(p->GetY(), 4);
@@ -49,7 +49,7 @@ TEST(PlayerTest, PlayerGoToTarget)
 	g->AddGameObject(t);
 	g->AddGameObject(p);
 
-	p->Move(2, 2);
+	p->Move(GameObject::Direction::Up);
 
 	ASSERT_TRUE(t->GetX() == p->GetX());
 	ASSERT_TRUE(t->GetY() == p->GetY());
