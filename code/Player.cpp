@@ -17,15 +17,30 @@ bool Player::CheckCollision(Direction)
 
 void Player::Move(Direction direction)
 {
-	/*GameObject *go = GetGameSpace()->GetGameObject(newX, newY);
+	int x = GetX();
+	int y = GetY();
+	switch (direction)
+	{
+	case Up:
+		y--;
+		break;
+	case Down:
+		y++;
+		break;
+	case Right:
+		x++;
+		break;
+	case Left:
+		x--;
+		break;
+	}
+	GameObject *go = GetGameSpace()->GetGameObject(x, y);
 	if (go != nullptr)
 	{
-		if (go->CheckCollision(newX, newY))
+		if (go->CheckCollision(direction))
 			return;
-		int deltaX = newX - GetX();
-		int deltaY = newY - GetY();
-		go->Move(newX+deltaX,newY+deltaY);
+		go->Move(direction);
 	}
-	SetX(newX);
-	SetY(newY);*/
+	SetX(x);
+	SetY(y);
 }
