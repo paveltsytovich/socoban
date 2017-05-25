@@ -12,13 +12,13 @@ Box::~Box()
 {
 }
 
-bool Box::CheckCollision(int x, int y)
+bool Box::CheckCollision(Direction direction)
 {
 
-	return 0;
+	return true;
 }
 
-void Box::Move(int x, int y)
+void Box::Move(Direction direction)
 {
 
 }
