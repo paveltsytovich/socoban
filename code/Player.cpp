@@ -12,20 +12,20 @@ Player::~Player()
 
 bool Player::CheckCollision(int x, int y)
 {
-	return 0;
+	return true;
 }
 
 void Player::Move(int newX, int newY)
 {
 	GameObject *go = GetGameSpace()->GetGameObject(newX, newY);
 	if (go != nullptr)
-		return;
-
-	if (CheckCollision(newX, newY))
-		return;
-	int x=GetX(), y=GetY();
-	
-	go->Move(newX, newY);
-
-		
+	{
+		if (go->CheckCollision(newX, newY))
+			return;
+		int deltaX = newX - GetX();
+		int deltaY = newY - GetY();
+		go->Move(newX+deltaX,newY+deltaY);
+	}
+	SetX(newX);
+	SetY(newY);
 }
