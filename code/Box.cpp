@@ -32,8 +32,11 @@ bool Box::CheckCollision(Direction direction)
 		break;
 	}
 	GameObject *go = GetGameSpace()->GetGameObject(x, y);
-
-	return go!=nullptr;//Нужно доработать для Target
+	if (go != nullptr)
+	{
+		return go->CheckCollision(direction);
+	}
+	return false;
 }
 
 void Box::Move(Direction direction)
