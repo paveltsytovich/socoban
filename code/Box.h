@@ -3,6 +3,8 @@
 class Box :
 	public GameObject
 {
+	private:
+		static bool IsCallAgain;
 public:
 	Box(GameSpace* owner,int ax,int ay);
 	~Box();

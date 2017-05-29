@@ -1,6 +1,7 @@
 #include "Box.h"
 #include"GameSpace.h"
 
+bool Box::IsCallAgain = false;
 
 Box::Box(GameSpace*owner, int ax, int ay) :GameObject(owner,ax,ay)
 {
@@ -14,6 +15,9 @@ Box::~Box()
 
 bool Box::CheckCollision(Direction direction)
 {
+	if (IsCallAgain)
+		return true;
+	bool result = false;
 	int x = GetX();
 	int y = GetY();
 	switch (direction)
@@ -34,9 +38,11 @@ bool Box::CheckCollision(Direction direction)
 	GameObject *go = GetGameSpace()->GetGameObject(x, y);
 	if (go != nullptr)
 	{
-		return go->CheckCollision(direction);
+		IsCallAgain = true;
+		result = go->CheckCollision(direction);
+		IsCallAgain = false;
 	}
-	return false;
+	return result;
 }
 
 void Box::Move(Direction direction)
