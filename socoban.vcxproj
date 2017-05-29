@@ -11,9 +11,9 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{23B26701-108F-4850-AAAB-D5AF7C645DCD}</ProjectGuid>
+    <ProjectGuid>{7F8A7C6D-4939-4B0D-B5BB-0D128224E6CE}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>gtest_template</RootNamespace>
+    <RootNamespace>socoban</RootNamespace>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -41,8 +41,6 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>..\include;$(IncludePath)</IncludePath>
-    <LibraryPath>$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
@@ -53,8 +51,9 @@
       </PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_LIB;_VARIADIC_MAX=10;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>C:\Users\днс\Documents\Visual Studio 2013\Projects\socoban\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -80,9 +79,24 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\src\gtest-all.cc" />
-    <ClCompile Include="..\src\gtest_main.cc" />
-    <ClCompile Include="sample.cpp" />
+    <ClCompile Include="code\Box.cpp" />
+    <ClCompile Include="code\GameSpace.cpp" />
+    <ClCompile Include="code\GameSpaceTest.cpp" />
+    <ClCompile Include="code\Player.cpp" />
+    <ClCompile Include="code\PlayerTest.cpp" />
+    <ClCompile Include="code\sample.cpp" />
+    <ClCompile Include="code\Target.cpp" />
+    <ClCompile Include="code\Wall.cpp" />
+    <ClCompile Include="src\gtest-all.cc" />
+    <ClCompile Include="src\gtest_main.cc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="code\Box.h" />
+    <ClInclude Include="code\GameObject.h" />
+    <ClInclude Include="code\GameSpace.h" />
+    <ClInclude Include="code\Player.h" />
+    <ClInclude Include="code\Target.h" />
+    <ClInclude Include="code\Wall.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
