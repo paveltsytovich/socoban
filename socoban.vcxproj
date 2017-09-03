@@ -89,6 +89,7 @@
     <ClCompile Include="code\sample.cpp" />
     <ClCompile Include="code\Target.cpp" />
     <ClCompile Include="code\Wall.cpp" />
+    <ClCompile Include="ImageRepository.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="src\gtest-all.cc" />
     <ClCompile Include="src\gtest_main.cc" />
@@ -100,6 +101,7 @@
     <ClInclude Include="code\Player.h" />
     <ClInclude Include="code\Target.h" />
     <ClInclude Include="code\Wall.h" />
+    <ClInclude Include="ImageRepository.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
