@@ -1,7 +1,7 @@
 #include "GameWidget.h"
 
 
-GameWidget::GameWidget(int PictureId, ImageRepository* Repo) : PictureId(PictureId), Repo(Repo)
+GameWidget::GameWidget(int PictureId, ImageRepository* Repo) : Fl_Window(10,10, ""), PictureId(PictureId), Repo(Repo)
 {
 	
 }
