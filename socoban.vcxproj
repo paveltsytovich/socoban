@@ -90,6 +90,7 @@
     <ClCompile Include="code\Target.cpp" />
     <ClCompile Include="code\Wall.cpp" />
     <ClCompile Include="GameWidget.cpp" />
+    <ClCompile Include="Graphics.cpp" />
     <ClCompile Include="ImageRepository.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="src\gtest-all.cc" />
@@ -103,6 +104,7 @@
     <ClInclude Include="code\Target.h" />
     <ClInclude Include="code\Wall.h" />
     <ClInclude Include="GameWidget.h" />
+    <ClInclude Include="Graphics.h" />
     <ClInclude Include="ImageRepository.h" />
   </ItemGroup>
   <ItemGroup>
